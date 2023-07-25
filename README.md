@@ -5,7 +5,11 @@
 - Repository: https://github.com/rickkas7/EdgeEventQueueRK
 - License: MIT (free for use in open or closed-source projects, including commercial projects)
 
-This library is intended to be used with Tracker Edge or Monitor Edge for implementing custom store and forward queueing.
+This library is intended to be used with Tracker Edge or Monitor Edge for implementing custom store and forward queueing. Because its requires the
+function of your Edge software, there are no library examples in this repository as they wouldn't be able to be compiled successfully.
+
+For more information about store and forward, see the [Particle docs](https://docs.particle.io/firmware/tracker-edge/sotre-and-forward/).
+
 
 ## Setup
 
@@ -13,6 +17,12 @@ This library is intended to be used with Tracker Edge or Monitor Edge for implem
 
 
 - Add the EdgeEventQueueRK library to your Tracker Edge product, typically using **Particle: Install Library** in Particle Workbench.
+
+- Add the include file:
+
+```cpp
+#include "EdgeEventQueueRK.h"
+```
 
 - Add a global variable for your queue, typically in main.cpp. You will typically one have one, but you can have multiple queues.
 
@@ -38,8 +48,13 @@ privateEventQueue.loop();
 
 ### Monitor Edge
 
-
 - Add the EdgeEventQueueRK library to your Monitor Edge product, typically using **Particle: Install Library** in Particle Workbench.
+
+- Add the include file:
+
+```cpp
+#include "EdgeEventQueueRK.h"
+```
 
 - Add a global variable for your queue, typically in user_setup.cpp. You will typically one have one, but you can have multiple queues.
 

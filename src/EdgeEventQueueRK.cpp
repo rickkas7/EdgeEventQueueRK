@@ -135,9 +135,10 @@ int EdgeEventQueueRK::cloudServicePublish(const char *eventName, const char *eve
             }
         },
         std::numeric_limits<system_tick_t>::max(), // No timeout, not used except with FULL_ACK anyway
+        nullptr, // context
         eventName, 
-        0, // req_id 
-        priority);
+        1, // req_id 
+        priority); // level
 
 #else
     // Monitor Edge
@@ -156,7 +157,7 @@ int EdgeEventQueueRK::cloudServicePublish(const char *eventName, const char *eve
         },
         std::numeric_limits<system_tick_t>::max(), // No timeout, not used except with FULL_ACK anyway
         eventName, 
-        0, // req_id 
+        1, // req_id 
         priority);
 #endif
 

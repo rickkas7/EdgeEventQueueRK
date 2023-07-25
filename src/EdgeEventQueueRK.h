@@ -72,9 +72,9 @@ public:
     void loop();
 
     /**
-     * @brief Sets the priority to use for publishing. Default is 0.
+     * @brief Sets the priority to use for publishing. Default is 1 (normal).
      * 
-     * @param priority 0 or 1. 0 is the default queue and 1 is the low priority queue.
+     * @param priority 0 or 1. 0 is the high priority queue and 1 is the normal priority queue. Location publishes use the normal queue, 1.
      * 
      * @return EdgeEventQueueRK& Reference to this object to chain, fluent-style
      */
@@ -141,7 +141,7 @@ public:
      * 
      * @param publishFlags Publish flags, as is used in Particle.publish. This is optional, and if omitted the default flags are used.
      * 
-     * @param priority 0 or 1. 0 is the default queue and 1 is the low priority queue.
+     * @param priority 0 or 1. 0 is the high priority queue and 1 is the normal priority queue. Location publishes use the normal queue, 1.
      * 
      * @param cb Callback function to be called on successful completion or error. Optional. Not called if an immediate error
      * results in a non-zero result code; callback is only called if the return value is 0.
@@ -212,9 +212,9 @@ private:
     uint64_t nextCheck = 0;
 
     /**
-     * @brief Which queue to use 0 = normal, 1 = low-priority
+     * @brief Which queue to use 0 = high priority, 1 = normal priority, default, also used by location publish
      */
-    size_t priority = 0;
+    size_t priority = 1;
 
     /**
      * @brief Flags as for Particle.publish

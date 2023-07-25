@@ -4,6 +4,7 @@
 
 - Repository: https://github.com/rickkas7/EdgeEventQueueRK
 - License: MIT (free for use in open or closed-source projects, including commercial projects)
+- [Browseable API docs](https://rickkas7.github.io/index.html)
 
 This library is intended to be used with Tracker Edge or Monitor Edge for implementing custom store and forward queueing. Because its requires the
 function of your Edge software, there are no library examples in this repository as they wouldn't be able to be compiled successfully.

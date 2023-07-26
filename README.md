@@ -2,6 +2,12 @@
 
 *Store and forward publishing queue for Tracker Edge and Monitor Edge*
 
+NOTE: You should use the official version of this library instead! It can be found at:
+
+https://github.com/particle-iot/EdgeEventQueue
+
+---
+
 - Repository: https://github.com/rickkas7/EdgeEventQueueRK
 - License: MIT (free for use in open or closed-source projects, including commercial projects)
 - [Browseable API docs](https://rickkas7.github.io/EdgeEventQueueRK/index.html)
